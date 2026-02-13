@@ -1,24 +1,26 @@
-class fclass1 {
+public class fclass1 {
+    public void show() {
+        System.out.println("Это класс fclass1");
+    }
 
-    void show() {
-        System.out.println("Бұл fclass1 класы");
+    public static void main(String[] args) {
+        fclass3 obj = new fclass3();
+        obj.show();
     }
 }
 
 class fclass2 extends fclass1 {
-
-    void info() {
-        System.out.println("Бұл fclass2 класы");
+    @Override
+    public void show() {
+        super.show(); // fclass1
+        System.out.println("Это класс fclass2");
     }
 }
 
 class fclass3 extends fclass2 {
-
-    public static void main(String[] args) {
-
-        fclass3 obj = new fclass3();
-
-        obj.show();  // fclass1 әдісі
-        obj.info();  // fclass2 әдісі
+    @Override
+    public void show() {
+        super.show(); // fclass1 + fclass2
+        System.out.println("Это класс fclass3");
     }
 }
