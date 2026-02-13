@@ -1,14 +1,23 @@
-class fclass {
+class Student {
 
-    protected int number = 100;
+    String name = "Gulden";
+
+    void study() {
+        System.out.println(name + " оқып жатыр");
+    }
 }
 
-class fclass2 extends fclass {
+class Teacher extends Student {
+
+    void teach() {
+        System.out.println("Мұғалім сабақ түсіндіріп жатыр");
+    }
 
     public static void main(String[] args) {
 
-        fclass2 obj = new fclass2();
+        Teacher obj = new Teacher();
 
-        System.out.println("Protected айнымалы мәні: " + obj.number);
+        obj.study();   // Student әдісі
+        obj.teach();   // Teacher әдісі
     }
 }

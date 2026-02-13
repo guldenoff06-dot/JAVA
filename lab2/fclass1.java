@@ -1,24 +1,14 @@
-class fclass1 {
+class fclass {
 
-    void show() {
-        System.out.println("Бұл fclass1 класы");
-    }
+    protected int number = 100;
 }
 
-class fclass2 extends fclass1 {
-
-    void info() {
-        System.out.println("Бұл fclass2 класы");
-    }
-}
-
-class fclass3 extends fclass2 {
+class fclass2 extends fclass {
 
     public static void main(String[] args) {
 
-        fclass3 obj = new fclass3();
+        fclass2 obj = new fclass2();
 
-        obj.show();  // fclass1 әдісі
-        obj.info();  // fclass2 әдісі
+        System.out.println("Protected айнымалы мәні: " + obj.number);
     }
 }
