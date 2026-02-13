@@ -1,23 +1,19 @@
-class Student {
+class Lab {
 
-    String name = "Gulden";
-
-    void study() {
-        System.out.println(name + " оқып жатыр");
-    }
+    String subject;
+    int hours;
 }
 
-class Teacher extends Student {
-
-    void teach() {
-        System.out.println("Мұғалім сабақ түсіндіріп жатыр");
-    }
+class Lab_ extends Lab {
 
     public static void main(String[] args) {
 
-        Teacher obj = new Teacher();
+        Lab_ obj = new Lab_();
 
-        obj.study();   // Student әдісі
-        obj.teach();   // Teacher әдісі
+        obj.subject = "Java бағдарламалау";
+        obj.hours = 2;
+
+        System.out.println("Пән: " + obj.subject);
+        System.out.println("Сағат саны: " + obj.hours);
     }
 }
