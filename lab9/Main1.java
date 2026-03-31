@@ -1,3 +1,6 @@
+import javax.swing.*;
+import java.awt.*;
+
 class Student {
     String name;
     int age;
@@ -19,4 +22,3 @@ public class Main1 {
         System.out.println("Students count: " + Student.count);
     }
 }
-9
