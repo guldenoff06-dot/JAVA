@@ -4,15 +4,15 @@ import java.util.List;
 public class OrdersExample {
     public static void main(String[] args) {
 
-        List<order> orders = Arrays.asList(
-                new order("Laptop", 1200),
-                new order("Phone", 800),
-                new order("Book", 50),
-                new order("Pen", 10)
+        List<Order> orders = Arrays.asList(
+                new Order("Laptop", 1200),
+                new Order("Phone", 800),
+                new Order("Book", 50),
+                new Order("Pen", 10)
         );
 
         // 1. Бағасы 100-ден жоғары
-        List<order> expensive = orders.stream()
+        List<Order> expensive = orders.stream()
                 .filter(o -> o.getPrice() > 100)
                 .toList();
 
@@ -21,7 +21,7 @@ public class OrdersExample {
 
         // 2. Жалпы сумма
         double total = orders.stream()
-                .mapToDouble(order::getPrice)
+                .mapToDouble(Order::getPrice)
                 .sum();
 
         System.out.println("Жалпы сумма: " + total);
@@ -33,7 +33,7 @@ class order {
     String item;
     double price;
 
-    order(String item, double price) {
+    void Order(String item, double price) {
         this.item = item;
         this.price = price;
     }
@@ -44,6 +44,6 @@ class order {
 
     @Override
     public String toString() {
-        return item + ": " + price;
+        return STR."\{item}: \{price}";
     }
 }
